@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedjahe - Wedang Jahe Premium Nusantara</title>
+    <title>Sedjahe - Minuman Herbal Alami Nusantara</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -26,16 +27,8 @@
             --shadow-xl: 0 30px 80px rgba(26, 46, 26, 0.3);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text-dark);
@@ -46,9 +39,7 @@
         /* ===== NAVBAR ===== */
         .navbar {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 1000;
             padding: 1rem 2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -70,17 +61,41 @@
             align-items: center;
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
             text-decoration: none;
-            letter-spacing: 2px;
         }
 
-        .logo span {
-            color: var(--accent);
+        .logo-wrapper img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .logo-wrapper:hover img {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .logo-tagline {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            margin-top: 2px;
         }
 
         .nav-links {
@@ -102,21 +117,14 @@
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
             background: var(--primary);
             transition: width 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-links a:hover::after { width: 100%; }
 
         .btn {
             display: inline-flex;
@@ -167,24 +175,15 @@
         }
 
         .hamburger span {
-            width: 28px;
-            height: 3px;
+            width: 28px; height: 3px;
             background: var(--primary);
             border-radius: 3px;
             transition: all 0.3s;
         }
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 6px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -6px);
-        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 
         /* ===== HERO SECTION ===== */
         .hero {
@@ -199,10 +198,8 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
+            top: -50%; right: -20%;
+            width: 800px; height: 800px;
             background: radial-gradient(circle, rgba(46, 125, 50, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
@@ -210,10 +207,8 @@
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 600px;
-            height: 600px;
+            bottom: -30%; left: -10%;
+            width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(165, 214, 167, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
@@ -230,9 +225,7 @@
             z-index: 1;
         }
 
-        .hero-content {
-            animation: fadeInUp 1s ease;
-        }
+        .hero-content { animation: fadeInUp 1s ease; }
 
         .hero-badge {
             display: inline-flex;
@@ -248,9 +241,7 @@
             border: 1px solid rgba(46, 125, 50, 0.2);
         }
 
-        .hero-badge i {
-            font-size: 0.75rem;
-        }
+        .hero-badge i { font-size: 0.75rem; }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
@@ -270,10 +261,8 @@
         .hero h1 .highlight::after {
             content: '';
             position: absolute;
-            bottom: 5px;
-            left: 0;
-            width: 100%;
-            height: 12px;
+            bottom: 5px; left: 0;
+            width: 100%; height: 12px;
             background: rgba(165, 214, 167, 0.4);
             z-index: -1;
             border-radius: 2px;
@@ -339,12 +328,15 @@
             justify-content: center;
             position: relative;
             box-shadow: var(--shadow-xl);
+            overflow: hidden;
         }
 
-        .hero-image-wrapper .main-circle .ginger-icon {
-            font-size: 8rem;
-            color: white;
-            opacity: 0.9;
+        .hero-image-wrapper .main-circle img {
+            width: 65%;
+            height: 65%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+            animation: float-logo 4s ease-in-out infinite;
         }
 
         .hero-image-wrapper .main-circle::before {
@@ -369,27 +361,12 @@
             z-index: 2;
         }
 
-        .floating-card.card-1 {
-            top: 10%;
-            right: -30px;
-            animation-delay: 0s;
-        }
-
-        .floating-card.card-2 {
-            bottom: 15%;
-            left: -40px;
-            animation-delay: 1s;
-        }
-
-        .floating-card.card-3 {
-            bottom: 5%;
-            right: 10%;
-            animation-delay: 2s;
-        }
+        .floating-card.card-1 { top: 10%; right: -30px; animation-delay: 0s; }
+        .floating-card.card-2 { bottom: 15%; left: -40px; animation-delay: 1s; }
+        .floating-card.card-3 { bottom: 5%; right: 10%; animation-delay: 2s; }
 
         .floating-card .card-icon {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -397,40 +374,23 @@
             font-size: 1.1rem;
         }
 
-        .floating-card .card-icon.green {
-            background: rgba(46, 125, 50, 0.1);
-            color: var(--primary);
-        }
+        .floating-card .card-icon.green { background: rgba(46, 125, 50, 0.1); color: var(--primary); }
+        .floating-card .card-icon.lime { background: rgba(76, 175, 80, 0.1); color: var(--primary-light); }
+        .floating-card .card-icon.dark-green { background: rgba(27, 94, 32, 0.1); color: var(--primary-dark); }
 
-        .floating-card .card-icon.lime {
-            background: rgba(76, 175, 80, 0.1);
-            color: var(--primary-light);
-        }
-
-        .floating-card .card-icon.dark-green {
-            background: rgba(27, 94, 32, 0.1);
-            color: var(--primary-dark);
-        }
-
-        .floating-card .card-text {
-            font-size: 0.8rem;
-        }
-
+        .floating-card .card-text { font-size: 0.8rem; }
         .floating-card .card-text strong {
             display: block;
             font-size: 0.85rem;
             color: var(--text-dark);
         }
-
         .floating-card .card-text span {
             color: var(--text-light);
             font-size: 0.75rem;
         }
 
         /* ===== SECTION COMMON ===== */
-        section {
-            padding: 6rem 2rem;
-        }
+        section { padding: 6rem 2rem; }
 
         .section-header {
             text-align: center;
@@ -452,8 +412,7 @@
         .section-header .section-tag::before,
         .section-header .section-tag::after {
             content: '';
-            width: 30px;
-            height: 2px;
+            width: 30px; height: 2px;
             background: var(--primary-light);
         }
 
@@ -473,10 +432,8 @@
             line-height: 1.7;
         }
 
-        /* ===== ABOUT SECTION ===== */
-        .about {
-            background: white;
-        }
+        /* ===== ABOUT ===== */
+        .about { background: white; }
 
         .about .container {
             max-width: 1200px;
@@ -487,9 +444,7 @@
             align-items: center;
         }
 
-        .about-image {
-            position: relative;
-        }
+        .about-image { position: relative; }
 
         .about-image .image-box {
             width: 100%;
@@ -510,17 +465,17 @@
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
         }
 
-        .about-image .image-box .about-icon {
-            font-size: 6rem;
-            color: white;
-            opacity: 0.9;
+        .about-image .image-box img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
             z-index: 1;
+            filter: drop-shadow(0 15px 40px rgba(0,0,0,0.3));
         }
 
         .about-image .experience-badge {
             position: absolute;
-            bottom: -20px;
-            right: -20px;
+            bottom: -20px; right: -20px;
             background: var(--secondary);
             color: white;
             padding: 1.5rem;
@@ -552,9 +507,7 @@
             line-height: 1.2;
         }
 
-        .about-content h2 span {
-            color: var(--primary);
-        }
+        .about-content h2 span { color: var(--primary); }
 
         .about-content > p {
             color: var(--text-light);
@@ -577,8 +530,7 @@
         }
 
         .about-feature .feature-icon {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             min-width: 45px;
             border-radius: 12px;
             background: rgba(46, 125, 50, 0.1);
@@ -602,10 +554,8 @@
             line-height: 1.5;
         }
 
-        /* ===== PRODUCTS SECTION ===== */
-        .products {
-            background: var(--cream);
-        }
+        /* ===== PRODUCTS ===== */
+        .products { background: var(--cream); }
 
         .products .container {
             max-width: 1200px;
@@ -634,53 +584,34 @@
 
         .product-card .product-badge {
             position: absolute;
-            top: 1rem;
-            left: 1rem;
+            top: 1rem; left: 1rem;
             background: var(--primary);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 0.4rem 1rem;
             border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 600;
             z-index: 2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         .product-card .product-image {
-            height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 320px;
             position: relative;
             overflow: hidden;
+            background: linear-gradient(135deg, #F1F8F1 0%, #E8F5E9 100%);
         }
 
-        .product-card .product-image::before {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+        .product-card .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.6s ease;
         }
 
-        .product-card .product-image::after {
-            content: '';
-            position: absolute;
-            top: -30px;
-            left: -30px;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-        }
-
-        .product-card .product-image i {
-            font-size: 5rem;
-            color: white;
-            opacity: 0.9;
-            z-index: 1;
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
         }
 
         .product-card .product-info {
@@ -700,6 +631,7 @@
             font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 1.2rem;
+            min-height: 65px;
         }
 
         .product-card .product-footer {
@@ -723,26 +655,26 @@
         }
 
         .product-card .btn-cart {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             border-radius: 50%;
-            background: var(--primary);
+            background: #25D366;
             color: white;
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
         .product-card .btn-cart:hover {
-            background: var(--primary-dark);
-            transform: scale(1.1);
+            background: #20BA5A;
+            transform: scale(1.1) rotate(10deg);
         }
 
-        /* ===== BENEFITS SECTION ===== */
+        /* ===== BENEFITS ===== */
         .benefits {
             background: var(--secondary);
             position: relative;
@@ -752,10 +684,7 @@
         .benefits::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
             opacity: 0.5;
         }
@@ -767,22 +696,11 @@
             z-index: 1;
         }
 
-        .benefits .section-header .section-tag {
-            color: var(--accent);
-        }
-
+        .benefits .section-header .section-tag { color: var(--accent); }
         .benefits .section-header .section-tag::before,
-        .benefits .section-header .section-tag::after {
-            background: var(--accent);
-        }
-
-        .benefits .section-header h2 {
-            color: white;
-        }
-
-        .benefits .section-header p {
-            color: rgba(255, 255, 255, 0.6);
-        }
+        .benefits .section-header .section-tag::after { background: var(--accent); }
+        .benefits .section-header h2 { color: white; }
+        .benefits .section-header p { color: rgba(255, 255, 255, 0.6); }
 
         .benefits-grid {
             display: grid;
@@ -807,8 +725,7 @@
         }
 
         .benefit-card .benefit-icon {
-            width: 70px;
-            height: 70px;
+            width: 70px; height: 70px;
             margin: 0 auto 1.5rem;
             border-radius: 20px;
             background: var(--gradient-warm);
@@ -834,9 +751,7 @@
         }
 
         /* ===== PROCESS ===== */
-        .process {
-            background: white;
-        }
+        .process { background: white; }
 
         .process .container {
             max-width: 1200px;
@@ -854,8 +769,7 @@
             content: '';
             position: absolute;
             top: 45px;
-            left: 12%;
-            right: 12%;
+            left: 12%; right: 12%;
             height: 3px;
             background: linear-gradient(90deg, var(--primary-light), var(--accent));
             border-radius: 3px;
@@ -867,8 +781,7 @@
         }
 
         .process-step .step-number {
-            width: 90px;
-            height: 90px;
+            width: 90px; height: 90px;
             margin: 0 auto 1.5rem;
             border-radius: 50%;
             background: var(--cream);
@@ -886,13 +799,8 @@
             color: var(--primary);
         }
 
-        .process-step:hover .step-number {
-            background: var(--primary);
-        }
-
-        .process-step:hover .step-number i {
-            color: white;
-        }
+        .process-step:hover .step-number { background: var(--primary); }
+        .process-step:hover .step-number i { color: white; }
 
         .process-step h3 {
             font-family: 'Playfair Display', serif;
@@ -909,9 +817,7 @@
         }
 
         /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            background: var(--cream);
-        }
+        .testimonials { background: var(--cream); }
 
         .testimonials .container {
             max-width: 1200px;
@@ -972,8 +878,7 @@
         }
 
         .testimonial-card .reviewer .avatar {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             border-radius: 50%;
             background: var(--gradient-warm);
             display: flex;
@@ -995,7 +900,7 @@
             color: var(--text-light);
         }
 
-        /* ===== CTA SECTION ===== */
+        /* ===== CTA ===== */
         .cta {
             background: var(--gradient-warm);
             position: relative;
@@ -1005,10 +910,8 @@
         .cta::before {
             content: '';
             position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
+            top: -100px; right: -100px;
+            width: 400px; height: 400px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
         }
@@ -1016,10 +919,8 @@
         .cta::after {
             content: '';
             position: absolute;
-            bottom: -150px;
-            left: -100px;
-            width: 500px;
-            height: 500px;
+            bottom: -150px; left: -100px;
+            width: 500px; height: 500px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
         }
@@ -1079,9 +980,7 @@
         }
 
         /* ===== FAQ ===== */
-        .faq {
-            background: white;
-        }
+        .faq { background: white; }
 
         .faq .container {
             max-width: 800px;
@@ -1096,9 +995,7 @@
             transition: all 0.3s;
         }
 
-        .faq-item:hover {
-            border-color: var(--primary-light);
-        }
+        .faq-item:hover { border-color: var(--primary-light); }
 
         .faq-item.active {
             border-color: var(--primary);
@@ -1122,9 +1019,7 @@
             transition: color 0.3s;
         }
 
-        .faq-question:hover {
-            color: var(--primary);
-        }
+        .faq-question:hover { color: var(--primary); }
 
         .faq-question i {
             color: var(--primary);
@@ -1132,9 +1027,7 @@
             font-size: 0.9rem;
         }
 
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
 
         .faq-answer {
             max-height: 0;
@@ -1142,9 +1035,7 @@
             transition: max-height 0.4s ease;
         }
 
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-        }
+        .faq-item.active .faq-answer { max-height: 300px; }
 
         .faq-answer p {
             padding: 0 1.5rem 1.3rem;
@@ -1171,10 +1062,23 @@
             margin-bottom: 3rem;
         }
 
-        .footer-brand .logo {
-            font-size: 2rem;
-            display: inline-block;
+        .footer-brand .logo-wrapper {
             margin-bottom: 1rem;
+        }
+
+        .footer-brand .logo-wrapper img {
+            width: 55px;
+            height: 55px;
+            filter: brightness(1.2);
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .footer-brand .logo-tagline {
+            color: rgba(255, 255, 255, 0.5);
         }
 
         .footer-brand p {
@@ -1182,6 +1086,7 @@
             font-size: 0.9rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
+            margin-top: 1rem;
         }
 
         .footer-social {
@@ -1190,8 +1095,7 @@
         }
 
         .footer-social a {
-            width: 42px;
-            height: 42px;
+            width: 42px; height: 42px;
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.08);
             display: flex;
@@ -1217,13 +1121,9 @@
             margin-bottom: 1.5rem;
         }
 
-        .footer-column ul {
-            list-style: none;
-        }
+        .footer-column ul { list-style: none; }
 
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
+        .footer-column ul li { margin-bottom: 0.8rem; }
 
         .footer-column ul li a {
             color: rgba(255, 255, 255, 0.5);
@@ -1282,11 +1182,9 @@
         /* ===== WHATSAPP FLOAT ===== */
         .wa-float {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
+            bottom: 2rem; right: 2rem;
             z-index: 999;
-            width: 60px;
-            height: 60px;
+            width: 60px; height: 60px;
             border-radius: 50%;
             background: #25D366;
             display: flex;
@@ -1305,14 +1203,12 @@
             box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
         }
 
-        /* ===== SCROLL TO TOP ===== */
+        /* ===== SCROLL TOP ===== */
         .scroll-top {
             position: fixed;
-            bottom: 2rem;
-            right: 6rem;
+            bottom: 2rem; right: 6rem;
             z-index: 999;
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             border-radius: 50%;
             background: var(--primary);
             color: white;
@@ -1328,11 +1224,7 @@
             box-shadow: var(--shadow-md);
         }
 
-        .scroll-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
+        .scroll-top.visible { opacity: 1; visibility: visible; }
         .scroll-top:hover {
             background: var(--primary-dark);
             transform: translateY(-3px);
@@ -1352,6 +1244,11 @@
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
+        }
+
+        @keyframes float-logo {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.03); }
         }
 
         @keyframes spin {
@@ -1396,9 +1293,13 @@
 
         @media (max-width: 768px) {
             .nav-links {
-                position: fixed; top: 0; right: -100%; width: 280px; height: 100vh;
-                background: white; flex-direction: column; padding: 5rem 2rem 2rem;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.1); transition: right 0.4s; gap: 1.5rem;
+                position: fixed; top: 0; right: -100%;
+                width: 280px; height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 5rem 2rem 2rem;
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+                transition: right 0.4s; gap: 1.5rem;
             }
             .nav-links.active { right: 0; }
             .hamburger { display: flex; z-index: 1001; }
@@ -1413,11 +1314,16 @@
             .cta h2 { font-size: 2rem; }
             .footer-grid { grid-template-columns: 1fr; }
             .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
+            .logo-text { font-size: 1.3rem; }
+            .logo-wrapper img { width: 38px; height: 38px; }
         }
 
         .nav-overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.5);
-            z-index: 998; opacity: 0; visibility: hidden; transition: all 0.3s;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 998;
+            opacity: 0; visibility: hidden;
+            transition: all 0.3s;
         }
         .nav-overlay.active { opacity: 1; visibility: visible; }
     </style>
@@ -1427,7 +1333,13 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="#" class="logo">SEDJA<span>HE</span></a>
+            <a href="#" class="logo-wrapper">
+                <img src="images/logo.png" alt="Sedjahe Logo">
+                <div>
+                    <span class="logo-text">SEDJAHE</span>
+                    <span class="logo-tagline">HERBAL DRINK</span>
+                </div>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang">Tentang</a></li>
@@ -1452,8 +1364,8 @@
                     <i class="fas fa-leaf"></i>
                     100% Bahan Alami & Tradisional
                 </div>
-                <h1>Hangatnya<br><span class="highlight">Wedang Jahe</span><br>Asli Nusantara</h1>
-                <p>Nikmati kehangatan jahe pilihan yang diracik dengan resep warisan leluhur. Setiap tegukan menghadirkan khasiat alami untuk tubuh dan jiwa Anda.</p>
+                <h1>Hangatnya<br><span class="highlight">Wedang Herbal</span><br>Asli Nusantara</h1>
+                <p>Nikmati kehangatan minuman herbal pilihan yang diracik dengan resep warisan leluhur. Setiap tegukan menghadirkan khasiat alami untuk tubuh dan jiwa Anda.</p>
                 <div class="hero-buttons">
                     <a href="#produk" class="btn btn-primary"><i class="fas fa-shopping-bag"></i> Lihat Produk</a>
                     <a href="#tentang" class="btn btn-outline"><i class="fas fa-play-circle"></i> Cerita Kami</a>
@@ -1467,7 +1379,7 @@
             <div class="hero-visual">
                 <div class="hero-image-wrapper">
                     <div class="main-circle">
-                        <div class="ginger-icon">🫚</div>
+                        <img src="images/logo.png" alt="Sedjahe Logo">
                     </div>
                     <div class="floating-card card-1">
                         <div class="card-icon green"><i class="fas fa-fire"></i></div>
@@ -1490,16 +1402,18 @@
     <section class="about" id="tentang">
         <div class="container">
             <div class="about-image animate-on-scroll">
-                <div class="image-box"><div class="about-icon">☕</div></div>
+                <div class="image-box">
+                    <img src="images/logo.png" alt="Sedjahe">
+                </div>
                 <div class="experience-badge"><h3>15+</h3><p>Tahun<br>Pengalaman</p></div>
             </div>
             <div class="about-content animate-on-scroll">
                 <h2>Dari Dapur Tradisional, <span>Untuk Indonesia</span></h2>
-                <p>Sedjahe lahir dari kecintaan kami terhadap warisan kuliner Nusantara. Kami meracik setiap produk dengan jahe pilihan dari petani lokal terbaik, menggunakan resep turun-temurun yang telah teruji khasiatnya.</p>
+                <p>Sedjahe lahir dari kecintaan kami terhadap warisan kuliner Nusantara. Kami meracik setiap produk dengan bahan pilihan dari petani lokal terbaik, menggunakan resep turun-temurun yang telah teruji khasiatnya.</p>
                 <div class="about-features">
                     <div class="about-feature">
                         <div class="feature-icon"><i class="fas fa-seedling"></i></div>
-                        <div class="feature-text"><h4>Jahe Pilihan</h4><p>Dari petani lokal terpercaya</p></div>
+                        <div class="feature-text"><h4>Bahan Pilihan</h4><p>Dari petani lokal terpercaya</p></div>
                     </div>
                     <div class="about-feature">
                         <div class="feature-icon"><i class="fas fa-mortar-pestle"></i></div>
@@ -1519,7 +1433,7 @@
         </div>
     </section>
 
-    <!-- PRODUCTS (3 PRODUK SAJA) -->
+    <!-- PRODUCTS -->
     <section class="products" id="produk">
         <div class="container">
             <div class="section-header animate-on-scroll">
@@ -1532,15 +1446,17 @@
                 <!-- PRODUK 1: JAHE MERAH ORIGINAL -->
                 <div class="product-card animate-on-scroll">
                     <span class="product-badge">Best Seller</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #1B5E20, #2E7D32);">
-                        <i class="fas fa-mug-hot"></i>
+                    <div class="product-image">
+                        <img src="images/jahe-merah-original.jpg" alt="Jahe Merah Original Sedjahe">
                     </div>
                     <div class="product-info">
                         <h3>Jahe Merah Original</h3>
-                        <p>Jahe merah murni pilihan dengan rasa pedas hangat yang khas. Cocok untuk menghangatkan badan, meredakan masuk angin, dan meningkatkan daya tahan tubuh di segala cuaca.</p>
+                        <p>Jahe merah murni pilihan dengan rasa pedas hangat yang khas. Cocok untuk menghangatkan badan dan meredakan masuk angin.</p>
                         <div class="product-footer">
-                            <div class="price">Rp 35K <small>/ box</small></div>
-                            <button class="btn-cart" onclick="orderProduct('Jahe Merah Original', 'Rp 35.000')"><i class="fab fa-whatsapp"></i></button>
+                            <div class="price">Rp 35K <small>/ pack</small></div>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Merah Original', 'Rp 35.000')" title="Pesan via WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1548,15 +1464,17 @@
                 <!-- PRODUK 2: WEDANG UWUH -->
                 <div class="product-card animate-on-scroll">
                     <span class="product-badge" style="background: #33691E;">Favorit</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #33691E, #558B2F);">
-                        <i class="fas fa-coffee"></i>
+                    <div class="product-image">
+                        <img src="images/wedang-uwuh.jpg" alt="Wedang Uwuh Sedjahe">
                     </div>
                     <div class="product-info">
                         <h3>Wedang Uwuh</h3>
-                        <p>Racikan khas Yogyakarta dari rempah-rempah pilihan: kayu secang, jahe, kayu manis, cengkeh, dan gula batu. Aroma rempah yang harum dan khasiat yang menyegarkan tubuh.</p>
+                        <p>Racikan khas Yogyakarta dari kayu secang, jahe, kayu manis, dan cengkeh. Aroma rempah harum dengan khasiat menyegarkan.</p>
                         <div class="product-footer">
-                            <div class="price">Rp 40K <small>/ box</small></div>
-                            <button class="btn-cart" onclick="orderProduct('Wedang Uwuh', 'Rp 40.000')"><i class="fab fa-whatsapp"></i></button>
+                            <div class="price">Rp 40K <small>/ pack</small></div>
+                            <button class="btn-cart" onclick="orderProduct('Wedang Uwuh', 'Rp 40.000')" title="Pesan via WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1564,15 +1482,17 @@
                 <!-- PRODUK 3: BERAS KENCUR -->
                 <div class="product-card animate-on-scroll">
                     <span class="product-badge" style="background: #2E7D32;">Populer</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #2E7D32, #43A047);">
-                        <i class="fas fa-spa"></i>
+                    <div class="product-image">
+                        <img src="images/beras-kencur.jpg" alt="Beras Kencur Sedjahe">
                     </div>
                     <div class="product-info">
                         <h3>Beras Kencur</h3>
-                        <p>Jamu tradisional legendaris dari beras dan kencur pilihan. Menyegarkan badan, menambah nafsu makan, dan meredakan pegal-pegal. Cocok dinikmati dingin maupun hangat.</p>
+                        <p>Jamu tradisional legendaris dari beras dan kencur pilihan. Menyegarkan badan, menambah nafsu makan, dan meredakan pegal-pegal.</p>
                         <div class="product-footer">
-                            <div class="price">Rp 35K <small>/ box</small></div>
-                            <button class="btn-cart" onclick="orderProduct('Beras Kencur', 'Rp 35.000')"><i class="fab fa-whatsapp"></i></button>
+                            <div class="price">Rp 35K <small>/ pack</small></div>
+                            <button class="btn-cart" onclick="orderProduct('Beras Kencur', 'Rp 35.000')" title="Pesan via WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1757,8 +1677,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo">SEDJA<span>HE</span></a>
-                    <p>Menghadirkan kehangatan minuman tradisional premium khas Nusantara ke setiap rumah Indonesia. Dibuat dengan cinta dan resep warisan leluhur.</p>
+                    <a href="#" class="logo-wrapper">
+                        <img src="images/logo.png" alt="Sedjahe Logo">
+                        <div>
+                            <span class="logo-text">SEDJAHE</span>
+                            <span class="logo-tagline">HERBAL DRINK</span>
+                        </div>
+                    </a>
+                    <p>Menghadirkan kehangatan minuman herbal premium khas Nusantara ke setiap rumah Indonesia. Dibuat dengan cinta dan resep warisan leluhur.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1788,7 +1714,7 @@
                 <div class="footer-column">
                     <h4>Hubungi Kami</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i><span>Jl. Rempah Nusantara No. 45, Yogyakarta, Indonesia</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>Tangerang, Indonesia</span></li>
                         <li><i class="fas fa-phone-alt"></i><span>+62 895-3831-56946</span></li>
                         <li><i class="fas fa-envelope"></i><span>hello@sedjahe.id</span></li>
                         <li><i class="fas fa-clock"></i><span>Senin - Sabtu, 08.00 - 17.00 WIB</span></li>
@@ -1818,13 +1744,11 @@
             window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        // Navbar scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Mobile menu
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
         const navOverlay = document.getElementById('navOverlay');
@@ -1846,7 +1770,6 @@
         navOverlay.addEventListener('click', closeMenu);
         document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMenu));
 
-        // FAQ
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
@@ -1856,14 +1779,12 @@
             });
         });
 
-        // Scroll to top
         const scrollTopBtn = document.getElementById('scrollTop');
         window.addEventListener('scroll', () => {
             scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
         });
         scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
                 if (entry.isIntersecting) {
@@ -1875,7 +1796,6 @@
 
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1889,7 +1809,6 @@
             });
         });
 
-        // Counter animation
         function animateCounters() {
             document.querySelectorAll('.stat-item h3').forEach(counter => {
                 const target = counter.innerText;
