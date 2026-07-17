@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #C8590A;
-            --primary-dark: #9E4508;
-            --primary-light: #E8943A;
-            --secondary: #2D1810;
-            --accent: #F5C16C;
-            --cream: #FFF8F0;
-            --warm-white: #FFFDF9;
-            --text-dark: #1A0E08;
-            --text-medium: #5C3D2E;
-            --text-light: #8B6F60;
-            --gradient-warm: linear-gradient(135deg, #C8590A 0%, #E8943A 50%, #F5C16C 100%);
-            --gradient-dark: linear-gradient(135deg, #2D1810 0%, #5C3D2E 100%);
-            --shadow-sm: 0 2px 8px rgba(200, 89, 10, 0.1);
-            --shadow-md: 0 8px 30px rgba(200, 89, 10, 0.15);
-            --shadow-lg: 0 20px 60px rgba(200, 89, 10, 0.2);
-            --shadow-xl: 0 30px 80px rgba(45, 24, 16, 0.3);
+            --primary: #2E7D32;
+            --primary-dark: #1B5E20;
+            --primary-light: #4CAF50;
+            --secondary: #1A2E1A;
+            --accent: #A5D6A7;
+            --cream: #F1F8F1;
+            --warm-white: #F9FDF9;
+            --text-dark: #0E1A0E;
+            --text-medium: #2E4A2E;
+            --text-light: #5A7A5A;
+            --gradient-warm: linear-gradient(135deg, #1B5E20 0%, #2E7D32 40%, #4CAF50 100%);
+            --gradient-dark: linear-gradient(135deg, #1A2E1A 0%, #2E4A2E 100%);
+            --shadow-sm: 0 2px 8px rgba(46, 125, 50, 0.1);
+            --shadow-md: 0 8px 30px rgba(46, 125, 50, 0.15);
+            --shadow-lg: 0 20px 60px rgba(46, 125, 50, 0.2);
+            --shadow-xl: 0 30px 80px rgba(26, 46, 26, 0.3);
         }
 
         * {
@@ -56,9 +56,9 @@
         }
 
         .navbar.scrolled {
-            background: rgba(255, 248, 240, 0.95);
+            background: rgba(241, 248, 241, 0.95);
             backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(200, 89, 10, 0.1);
+            box-shadow: 0 4px 30px rgba(46, 125, 50, 0.1);
             padding: 0.7rem 2rem;
         }
 
@@ -137,12 +137,12 @@
         .btn-primary {
             background: var(--gradient-warm);
             color: white;
-            box-shadow: 0 4px 20px rgba(200, 89, 10, 0.3);
+            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(200, 89, 10, 0.4);
+            box-shadow: 0 8px 30px rgba(46, 125, 50, 0.4);
         }
 
         .btn-outline {
@@ -216,7 +216,7 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(200, 89, 10, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(46, 125, 50, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -227,7 +227,7 @@
             left: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(245, 193, 108, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(165, 214, 167, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -251,14 +251,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(200, 89, 10, 0.1);
+            background: rgba(46, 125, 50, 0.1);
             padding: 0.5rem 1.2rem;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--primary);
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(200, 89, 10, 0.2);
+            border: 1px solid rgba(46, 125, 50, 0.2);
         }
 
         .hero-badge i {
@@ -287,7 +287,7 @@
             left: 0;
             width: 100%;
             height: 12px;
-            background: rgba(245, 193, 108, 0.4);
+            background: rgba(165, 214, 167, 0.4);
             z-index: -1;
             border-radius: 2px;
         }
@@ -311,7 +311,7 @@
             gap: 2.5rem;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(200, 89, 10, 0.15);
+            border-top: 1px solid rgba(46, 125, 50, 0.15);
         }
 
         .stat-item h3 {
@@ -365,7 +365,7 @@
             position: absolute;
             inset: -15px;
             border-radius: 50%;
-            border: 2px dashed rgba(200, 89, 10, 0.3);
+            border: 2px dashed rgba(46, 125, 50, 0.3);
             animation: spin 20s linear infinite;
         }
 
@@ -410,18 +410,18 @@
             font-size: 1.1rem;
         }
 
-        .floating-card .card-icon.orange {
-            background: rgba(200, 89, 10, 0.1);
+        .floating-card .card-icon.green {
+            background: rgba(46, 125, 50, 0.1);
             color: var(--primary);
         }
 
-        .floating-card .card-icon.green {
-            background: rgba(46, 125, 50, 0.1);
-            color: #2E7D32;
+        .floating-card .card-icon.lime {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--primary-light);
         }
 
-        .floating-card .card-icon.gold {
-            background: rgba(245, 193, 108, 0.2);
+        .floating-card .card-icon.dark-green {
+            background: rgba(27, 94, 32, 0.1);
             color: var(--primary-dark);
         }
 
@@ -594,7 +594,7 @@
             height: 45px;
             min-width: 45px;
             border-radius: 12px;
-            background: rgba(200, 89, 10, 0.1);
+            background: rgba(46, 125, 50, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -660,7 +660,6 @@
 
         .product-card .product-image {
             height: 240px;
-            background: var(--gradient-warm);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -972,7 +971,7 @@
             align-items: center;
             gap: 1rem;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(200, 89, 10, 0.1);
+            border-top: 1px solid rgba(46, 125, 50, 0.1);
         }
 
         .testimonial-card .reviewer .avatar {
@@ -1093,7 +1092,7 @@
         }
 
         .faq-item {
-            border: 1px solid rgba(200, 89, 10, 0.15);
+            border: 1px solid rgba(46, 125, 50, 0.15);
             border-radius: 16px;
             margin-bottom: 1rem;
             overflow: hidden;
@@ -1256,7 +1255,7 @@
         }
 
         .footer-contact li i {
-            color: var(--primary);
+            color: var(--primary-light);
             margin-top: 3px;
             min-width: 16px;
         }
@@ -1529,7 +1528,6 @@
             }
         }
 
-        /* Mobile nav overlay */
         .nav-overlay {
             position: fixed;
             inset: 0;
@@ -1616,7 +1614,7 @@
                         <div class="ginger-icon">🫚</div>
                     </div>
                     <div class="floating-card card-1">
-                        <div class="card-icon orange">
+                        <div class="card-icon green">
                             <i class="fas fa-fire"></i>
                         </div>
                         <div class="card-text">
@@ -1625,7 +1623,7 @@
                         </div>
                     </div>
                     <div class="floating-card card-2">
-                        <div class="card-icon green">
+                        <div class="card-icon lime">
                             <i class="fas fa-leaf"></i>
                         </div>
                         <div class="card-text">
@@ -1634,7 +1632,7 @@
                         </div>
                     </div>
                     <div class="floating-card card-3">
-                        <div class="card-icon gold">
+                        <div class="card-icon dark-green">
                             <i class="fas fa-award"></i>
                         </div>
                         <div class="card-text">
@@ -1724,7 +1722,7 @@
             <div class="products-grid">
                 <div class="product-card animate-on-scroll">
                     <span class="product-badge">Best Seller</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #C8590A, #E8943A);">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1B5E20, #2E7D32);">
                         <i class="fas fa-mug-hot"></i>
                     </div>
                     <div class="product-info">
@@ -1732,13 +1730,13 @@
                         <p>Jahe merah murni pilihan dengan rasa pedas hangat yang khas. Cocok untuk menghangatkan badan di segala cuaca.</p>
                         <div class="product-footer">
                             <div class="price">Rp 35K <small>/ box</small></div>
-                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Merah Original', 'Rp 35K')"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <span class="product-badge" style="background: #2E7D32;">Favorit</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #5D4037, #8D6E63);">
+                    <span class="product-badge" style="background: #33691E;">Favorit</span>
+                    <div class="product-image" style="background: linear-gradient(135deg, #33691E, #558B2F);">
                         <i class="fas fa-coffee"></i>
                     </div>
                     <div class="product-info">
@@ -1746,13 +1744,13 @@
                         <p>Perpaduan sempurna jahe merah, susu segar, dan gula aren asli. Lembut, creamy, dan memanjakan lidah.</p>
                         <div class="product-footer">
                             <div class="price">Rp 42K <small>/ box</small></div>
-                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Susu Gula Aren', 'Rp 42K')"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll">
                     <span class="product-badge" style="background: #E65100;">Baru!</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #BF360C, #FF6E40);">
+                    <div class="product-image" style="background: linear-gradient(135deg, #2E7D32, #43A047);">
                         <i class="fas fa-pepper-hot"></i>
                     </div>
                     <div class="product-info">
@@ -1760,12 +1758,12 @@
                         <p>Campuran jahe dengan kayu manis, cengkeh, dan kapulaga. Aroma rempah nusantara yang menggoda selera.</p>
                         <div class="product-footer">
                             <div class="price">Rp 45K <small>/ box</small></div>
-                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Rempah Spesial', 'Rp 45K')"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image" style="background: linear-gradient(135deg, #F57F17, #FFD54F);">
+                    <div class="product-image" style="background: linear-gradient(135deg, #4CAF50, #66BB6A);">
                         <i class="fas fa-lemon"></i>
                     </div>
                     <div class="product-info">
@@ -1773,12 +1771,12 @@
                         <p>Kombinasi segar jahe, madu hutan asli, dan perasan lemon. Segarkan hari Anda dengan varian spesial ini.</p>
                         <div class="product-footer">
                             <div class="price">Rp 48K <small>/ box</small></div>
-                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Madu Lemon', 'Rp 48K')"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image" style="background: linear-gradient(135deg, #4E342E, #795548);">
+                    <div class="product-image" style="background: linear-gradient(135deg, #1B5E20, #388E3C);">
                         <i class="fas fa-cookie-bite"></i>
                     </div>
                     <div class="product-info">
@@ -1786,13 +1784,13 @@
                         <p>Paduan unik jahe premium dengan cokelat berkualitas. Rasa hangat dengan sentuhan manis yang memanjakan.</p>
                         <div class="product-footer">
                             <div class="price">Rp 45K <small>/ box</small></div>
-                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Cokelat', 'Rp 45K')"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll">
-                    <span class="product-badge" style="background: #9C27B0;">Premium</span>
-                    <div class="product-image" style="background: linear-gradient(135deg, #880E4F, #D81B60);">
+                    <span class="product-badge" style="background: #004D40;">Premium</span>
+                    <div class="product-image" style="background: linear-gradient(135deg, #004D40, #00695C);">
                         <i class="fas fa-spa"></i>
                     </div>
                     <div class="product-info">
@@ -1800,7 +1798,7 @@
                         <p>Edisi premium dengan saffron asli dan madu manuka. Kemewahan dalam setiap seduhan untuk Anda.</p>
                         <div class="product-footer">
                             <div class="price">Rp 75K <small>/ box</small></div>
-                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn-cart" onclick="orderProduct('Jahe Saffron Gold', 'Rp 75K')"><i class="fas fa-shopping-cart"></i></button>
                         </div>
                     </div>
                 </div>
@@ -1835,7 +1833,7 @@
                 </div>
                 <div class="benefit-card animate-on-scroll">
                     <div class="benefit-icon">
-                        <i class="fas fa-stomach"></i>
+                        <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <h3>Melancarkan Pencernaan</h3>
                     <p>Membantu meredakan mual, kembung, dan menjaga kesehatan sistem pencernaan secara alami.</p>
@@ -2060,7 +2058,7 @@
                 Gratis ongkir untuk pembelian pertama Anda!
             </p>
             <div class="cta-buttons">
-                <a href="https://wa.me/6281234567890?text=Halo%20Sedjahe%2C%20saya%20ingin%20memesan%20produk" class="btn btn-white" target="_blank">
+                <a href="https://wa.me/62895383156946?text=Halo%20Sedjahe%2C%20saya%20ingin%20memesan%20produk" class="btn btn-white" target="_blank">
                     <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
                 </a>
                 <a href="#produk" class="btn btn-ghost">
@@ -2114,7 +2112,7 @@
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+62 812-3456-7890</span>
+                            <span>+62 895-3831-56946</span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
@@ -2135,7 +2133,7 @@
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/6281234567890?text=Halo%20Sedjahe%2C%20saya%20ingin%20bertanya%20tentang%20produk" class="wa-float" target="_blank" title="Chat WhatsApp">
+    <a href="https://wa.me/62895383156946?text=Halo%20Sedjahe%2C%20saya%20ingin%20bertanya%20tentang%20produk" class="wa-float" target="_blank" title="Chat WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -2145,6 +2143,16 @@
     </button>
 
     <script>
+        // ===== WHATSAPP NUMBER =====
+        const WA_NUMBER = '62895383156946';
+
+        // ===== ORDER PRODUCT VIA WHATSAPP =====
+        function orderProduct(productName, price) {
+            const message = `Halo Sedjahe, saya ingin memesan:\n\n📦 Produk: ${productName}\n💰 Harga: ${price}\n\nMohon informasi selengkapnya. Terima kasih!`;
+            const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
         // ===== NAVBAR SCROLL =====
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -2174,7 +2182,6 @@
             document.body.style.overflow = '';
         });
 
-        // Close mobile menu on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -2190,12 +2197,10 @@
                 const item = btn.parentElement;
                 const isActive = item.classList.contains('active');
 
-                // Close all FAQ items
                 document.querySelectorAll('.faq-item').forEach(faq => {
                     faq.classList.remove('active');
                 });
 
-                // Open clicked item if it wasn't already open
                 if (!isActive) {
                     item.classList.add('active');
                 }
@@ -2237,7 +2242,7 @@
             observer.observe(el);
         });
 
-        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -2282,7 +2287,6 @@
             });
         }
 
-        // Trigger counter animation when hero section is visible
         const heroObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2296,18 +2300,6 @@
         if (heroStats) {
             heroObserver.observe(heroStats);
         }
-
-        // ===== ADD TO CART BUTTON EFFECT =====
-        document.querySelectorAll('.btn-cart').forEach(btn => {
-            btn.addEventListener('click', function () {
-                this.innerHTML = '<i class="fas fa-check"></i>';
-                this.style.background = '#2E7D32';
-                setTimeout(() => {
-                    this.innerHTML = '<i class="fas fa-shopping-cart"></i>';
-                    this.style.background = '';
-                }, 1500);
-            });
-        });
     </script>
 </body>
 </html>
