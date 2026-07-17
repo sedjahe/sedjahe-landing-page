@@ -36,7 +36,7 @@
             overflow-x: hidden;
         }
 
-        /* ===== NAVBAR ===== */
+        /* ===== NAVBAR (LOGO ONLY) ===== */
         .navbar {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -57,7 +57,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
@@ -66,22 +66,27 @@
             align-items: center;
             gap: 0.7rem;
             text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .logo-wrapper:hover {
+            transform: scale(1.05);
         }
 
         .logo-wrapper img {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
             transition: transform 0.3s;
         }
 
         .logo-wrapper:hover img {
-            transform: rotate(10deg) scale(1.1);
+            transform: rotate(10deg);
         }
 
         .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 800;
             color: var(--primary);
             letter-spacing: 2px;
@@ -91,40 +96,12 @@
         .logo-tagline {
             display: block;
             font-family: 'Poppins', sans-serif;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             font-weight: 500;
             color: var(--text-light);
             letter-spacing: 2px;
-            margin-top: 2px;
+            margin-top: 3px;
         }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-medium);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px; left: 0;
-            width: 0; height: 2px;
-            background: var(--primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--primary); }
-        .nav-links a:hover::after { width: 100%; }
 
         .btn {
             display: inline-flex;
@@ -163,27 +140,6 @@
             color: white;
             transform: translateY(-2px);
         }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-
-        .hamburger span {
-            width: 28px; height: 3px;
-            background: var(--primary);
-            border-radius: 3px;
-            transition: all 0.3s;
-        }
-
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 
         /* ===== HERO SECTION ===== */
         .hero {
@@ -1292,17 +1248,6 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                position: fixed; top: 0; right: -100%;
-                width: 280px; height: 100vh;
-                background: white;
-                flex-direction: column;
-                padding: 5rem 2rem 2rem;
-                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-                transition: right 0.4s; gap: 1.5rem;
-            }
-            .nav-links.active { right: 0; }
-            .hamburger { display: flex; z-index: 1001; }
             .hero h1 { font-size: 2.3rem; }
             .hero-image-wrapper { width: 280px; height: 280px; }
             .floating-card { display: none; }
@@ -1314,47 +1259,26 @@
             .cta h2 { font-size: 2rem; }
             .footer-grid { grid-template-columns: 1fr; }
             .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
-            .logo-text { font-size: 1.3rem; }
-            .logo-wrapper img { width: 38px; height: 38px; }
+            .logo-text { font-size: 1.4rem; }
+            .logo-wrapper img { width: 42px; height: 42px; }
+            .logo-tagline { font-size: 0.6rem; }
         }
-
-        .nav-overlay {
-            position: fixed; inset: 0;
-            background: rgba(0,0,0,0.5);
-            z-index: 998;
-            opacity: 0; visibility: hidden;
-            transition: all 0.3s;
-        }
-        .nav-overlay.active { opacity: 1; visibility: visible; }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR - LOGO ONLY -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="#" class="logo-wrapper">
+            <a href="#beranda" class="logo-wrapper">
                 <img src="images/logo.png" alt="Sedjahe Logo">
                 <div>
                     <span class="logo-text">SEDJAHE</span>
                     <span class="logo-tagline">HERBAL DRINK</span>
                 </div>
             </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#produk">Produk</a></li>
-                <li><a href="#manfaat">Manfaat</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="https://wa.me/62895383156946?text=Halo%20Sedjahe%2C%20saya%20ingin%20memesan%20produk" target="_blank" class="btn btn-primary">Pesan Sekarang</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </button>
         </div>
     </nav>
-    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- HERO -->
     <section class="hero" id="beranda">
@@ -1748,27 +1672,6 @@
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
-
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        const navOverlay = document.getElementById('navOverlay');
-
-        function closeMenu() {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            navOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        hamburger.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-        });
-
-        navOverlay.addEventListener('click', closeMenu);
-        document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMenu));
 
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
